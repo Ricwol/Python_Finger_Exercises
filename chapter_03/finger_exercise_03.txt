@@ -1,0 +1,15 @@
+# Finger exercise, p.79
+# What would the code (bisection_search.py) in Figure 3-5 do if x = -25?
+
+As the bounds are set to low = 0 and high = max(1, x), with x = -25, the upper
+bound will be set to 1. Thus, the number range will be between 0 and 1
+excluding the value of -25.
+The test condition of the while loop abs(ans**2 - x) >= 0.01 will always be
+true as for any ans -> abs(ans**2 - (-25)) will always be at least 25.
+The decrement condition isn't met which creates an infinity loop.
+The bisection condition trying to find the right value will reduce high each
+iteration until it will result 0 too.
+
+So the end result is an infinity loop setting low=0 and high=0 not changing
+the ans value anymore. But because of the start condition the value of -25 is
+never considered in the first place.
