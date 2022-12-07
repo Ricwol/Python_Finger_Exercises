@@ -1,0 +1,16 @@
+Finger exercise, p.271
+Is merge_sort a stable sort?
+
+A stable sort means that if two elements are equal with respect to the
+comparison used in the sort, their relative ordering in the original list is
+preserved in the final list.
+
+
+Answer:
+As merge_sort is a divide and conquer algorithm the stability is depending on
+the used compare function.
+
+The implementation of merge_sort in Figure 12-5, p.267 is not stable as the
+compare function is defined as: compare = lambda x, y: x < y
+If we change the "<" to "<=", i.e.: compare = lambda x, y: x <= y
+then we create a stable version of merge_sort.
