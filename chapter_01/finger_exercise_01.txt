@@ -1,0 +1,36 @@
+Finger exercise, p.32
+
+Computers can be annoyingly literal. If you don't tell them exactly what you
+want them to do, they are likely to do the wrong thing. Try writing an
+algorithm for driving between two destinations. Write it the way you would for
+a person, and then imagine what would happen if that person were as stupid as
+a computer, and execute the algorithm exactly as written.
+
+Algorithm for driving between two destinations:
+Start: Massachusetts College of Art and Design
+Address: 621 Huntington Ave, Boston, MA 02115
+
+Destination: MIT Computer Science and Artificial Intelligence Laboratory
+Address: 32 Vassar St, Cambridge, MA 02139
+
+For a person:
+1. Take Huntington Ave toward the Museum of Fine Arts.
+2. Turn left onto Hemenway St until you reach Berklee College.
+3. Then go right on Boylston St to turn left at the next opportunity on
+   Massachusetts Ave.
+4. After you cross the bridge, follow Massachusetts Ave until you make a right
+   onto Vassar St. Go to number 32 and you have arrived at the MIT Computer
+   Science and Artificial Intelligence Laboratory.
+
+Execute the algorithm as written for a computer.
+1. Could work if computer knows in which direction the Museum of Fine Arts is.
+2. Will produce an infinite loop because the statement
+   "turn left until Berklee College is reached" is too imprecise as a
+   termination condition.
+3. Never reached as computer is still turning left as he still hasn't reached
+   Berklee College on Hemenway St
+4. Same issue as in 3.
+
+Without more information, the computer will not reach the target. In addition,
+it does not pay attention to other road users during the execution and would
+also not observe any road traffic rules, as well as speed limits.
