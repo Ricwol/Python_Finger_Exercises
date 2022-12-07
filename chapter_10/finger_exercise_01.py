@@ -47,7 +47,7 @@ class Int_set(object):
             result += str(e) + ","
         return f"{{{result[:-1]}}}"
 
-    # Implementing union method
+    # Finger exercise: implement union method
     def union(self, other):
         """other is an Int_set
            mutates self so that it contains exactly the elements in self plus
@@ -55,14 +55,3 @@ class Int_set(object):
         """
         for e in other._vals:
             self.insert(e)
-
-# Finger exercise, p.209
-# Replace the union method you added to Int_set by a method that allows clients
-# of Int_set to use the + operator to denote set union.
-
-    def __add__(self, other):
-        int_set = Int_set()
-        for e in self._vals + other._vals:
-            # if not int_set.member(e):
-            int_set.insert(e)
-        return int_set
