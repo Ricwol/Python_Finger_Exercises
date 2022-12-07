@@ -1,0 +1,41 @@
+# Finger exercise, p.150
+# When the implementation of fib in Figure 6-3 is used to compute fib(5), how
+# many times does it compute the value of fib(2) on the way to computing fib(5)?
+
+# Implementation:
+def fib(n):
+    if n == 0 or n == 1:
+        return 1
+    return fib(n-1) + fib(n-2)
+
+
+Calling fib(5) results in the following call structure:
+fib(5)
+ |
+ |-> fib(4) + fib(3)
+      |        |
+      |        |-> fib(2) + fib(1)
+      |             |        |
+      |             |        |-> 1
+      |             |
+      |             |-> fib(1) + fib(0)
+      |                  |        |
+      |                  |-> 1    |-> 1
+      |
+      |-> fib(3) + fib(2)
+           |        |
+           |        |-> fib(1) + fib(0)
+           |             |        |
+           |             |-> 1    |-> 1
+           |
+           |-> fib(2) + fib(1)
+                |        |
+                |        |-> 1
+                |
+                |-> fib(1) + fib(0)
+                     |        |
+                     |-> 1    |-> 1
+
+
+Answer:
+|-> The value of fib(2) is copmuted 3 times.
