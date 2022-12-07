@@ -1,0 +1,50 @@
+Finger exercise, p.79
+The Empire State Building is 102 stories high. A man wanted to know the highest
+floor from which he could drop an egg without the egg breaking. He proposed to
+drop an egg from the top floor. If it broke, he would go down a floor, and try
+it again. He would do this until the egg did not break. At worst, this method
+requires 102 eggs. Implement a method that at worst uses seven eggs.
+
+Answer:
+To require a maximum of 7 eggs, use the method of bisection search and
+linear search.
+
+There are two cases to consider:
+1. The egg breaks as it falls, then halve the number of the current floor and
+   drop the next egg.
+2. The egg remains intact, then repeat the test with the same egg on the next
+   higher floor until the egg breaks.
+
+Follow the instructions to use max 7 eggs:
+1. Start on the 51 floor and drop the first egg.
+   It breaks, halve 51
+2. Go to 25 floor and drop the second egg.
+   This one also breaks after the drop. 
+   Halve 25
+3. Go to the 12 floor and drop the third egg.
+   It breaks, halve 12
+4. Go to the 6 floor and drop the fourth egg.
+   It breaks, halve 6
+5. Go to the 3 floor and drop the fifth egg.
+   It breaks, halve 3
+6. Go to the 1 floor and drop the sixth egg.
+   It breaks, halve 1. 
+7. You have arrived at the first floor and drop the seventh egg.
+
+If this one also breaks, you know that the highest floor from which you can
+drop an egg without it breaking does not exist.
+
+
+Suppose an egg remained intact after falling from the 26th floor.
+1. Start again at the 51 floor and drop the first egg.
+   It breaks, so cut 51 in half
+2. Go to the 25 floor and drop the second egg.
+   This time it stays whole. 
+3. Now use the second case and go to the 26th floor
+   repeat the fall with the second egg.
+   It stays whole again
+4. Go to the 27 floor.
+   This time the egg breaks.
+
+Thus, with only 2 eggs, the highest floor could be found from which an egg
+survives the fall unharmed.
