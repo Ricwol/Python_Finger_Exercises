@@ -1,0 +1,11 @@
+Finger exercise, p.81
+What is the decimal equivalent of the binary number 10011?
+
+Convert binary number 10011 to decimal:
+1*2^4 + 0*2^3 + 0*2^2 + 1*2^1 + 1*2^0
+= 1*16 + 0*8 + 0*4 + 1*2 + 1*1
+= 16 + 0 + 0 + 2 + 1
+= 19
+
+Answer:
+The binary number 10011 = 19 in decimal representation.
